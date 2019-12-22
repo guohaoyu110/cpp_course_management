@@ -5,6 +5,7 @@ using namespace std;
 //Course类成员函数
 
 //初始化静态成员，默认第一个课程ID为1
+int Course::currentId = 1;
 
 //课程类的构造函数
 

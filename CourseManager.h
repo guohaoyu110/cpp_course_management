@@ -10,7 +10,7 @@ class CourseManager{
 
 public:
     //默认构造函数
-    CourseManager();
+    CourseManager() = default;
     //构造函数：根据课程vector创建CourseManager
     CourseManager(const vector<Course>& courseVect);
     //获取课程列表长度
@@ -30,6 +30,9 @@ public:
 
     //打印课程列表信息
     void PrintAllCourse();
+
+    // 根据课程名称打印指定课程信息
+    void PrintCourse(const string &name); 
 
     //根据课程名称打印指定课程信息
     void PrintCourse(int id);
