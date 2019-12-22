@@ -21,7 +21,7 @@ void CourseManager::AddCourse(const string& courseName)
 }
 
 //添加课程函数（参数为课程对象）
-void CourseManager::AddCourse(cosnt Course &course)
+void CourseManager::AddCourse(const Course &course)
 {
     courseList.push_back(course);
 }

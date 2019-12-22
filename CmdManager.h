@@ -36,4 +36,5 @@ private:
     //使用map存储命令及帮助信息
     map<CourseCmd, string> cmdMap;
 };
+
 #endif //CMSYS_CMDMANAGER_H

@@ -29,7 +29,7 @@ void CmdManager::Init()
 //打印帮忙信息
 void CmdManager::PrintAllHelp() const{
     cout<<"Cmd List:"<<endl;
-    for(auto iter=cmdMap.begin(),iter!=cmdMap.end();iter++)
+    for(auto iter=cmdMap.begin();iter!=cmdMap.end();iter++)
     {
         cout<<iter->first<<":"<<iter->second<<endl;
     }
@@ -39,7 +39,7 @@ void CmdManager::PrintAllHelp() const{
 void CmdManager::PrintCmdHelp(const CourseCmd cmd) const {
     auto iter = cmdMap.find(cmd);
     if(iter!=cmdMap.end())
-        cout<<iter->fisrt<<":"<<iter->second<<endl;
+        cout<<iter->first<<":"<<iter->second<<endl;
     else
         cout<<"Not found"<<endl;
 }

@@ -17,7 +17,7 @@ public:
     inline int GetCourseNum() {return courseList.size();}
     //添加新的课程
     void AddCourse(const Course &course);
-    void AddCourse(cosnt string& courseName);
+    void AddCourse(const string& courseName);
 
     //删除课程：删除最后一个课程
     void RemoveLast();
@@ -32,7 +32,7 @@ public:
     void PrintAllCourse();
 
     //根据课程名称打印指定课程信息
-    void PrintCourse(ind id);
+    void PrintCourse(int id);
 
     //打印名称最长的课程
     void PrintLongNameCourse();
