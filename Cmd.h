@@ -1,6 +1,18 @@
 #ifndef CMSYS_CMD_H
 #define CMSYS_CMD_H
+
+// ifndef is if not defined，是宏定义的一种；
+'''
+#ifndef x //先测试x是否被宏定义过
+#define x
+程序段1 //如果x没有被宏定义过，定义x，并编译程序段 1
+#else
+程序段2 //如果x已经定义过了则编译程序段2的语句，“忽视”程序段 1
+#endif//终止if
+'''
+
 //支持的命令
+
 enum CourseCmd
 {
     //打印命令帮助信息
