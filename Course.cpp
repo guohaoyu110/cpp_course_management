@@ -23,7 +23,7 @@ Course::Course(const Course& course){
 }
 
 //打印课程信息
-void Course::PrintInfo()const{
+void Course::PrintInfo() const{
     cout<<"Course"<<id<<" : "<<name<<endl;
 }
 

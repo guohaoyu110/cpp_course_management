@@ -1,6 +1,7 @@
 #ifndef CMSYS_CMD_H
 #define CMSYS_CMD_H
 
+// 类的定义放在.h文件中，而类的实现放在cpp文件中
 // ifndef is if not defined，是宏定义的一种；
 '''
 #ifndef x //先测试x是否被宏定义过

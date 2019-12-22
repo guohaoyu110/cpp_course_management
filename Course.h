@@ -3,7 +3,19 @@
 #include<string>
 using namespace std;
 
+// #ifndef起到的效果是防止一个源文件两次包含同一个头文件，而不是防止两个源文件包含同一个头文件。
+//类的定义放在.h文件中，而类的实现放在cpp文件中
 //课程类，存储和处理课程信息
+'''
+假如你有一个C源文件，它包含了多个头文件，比如头文件A和头文件B，而头文件B又包含了头文件A，则最终的效果是，该源文件包含了两次头文件A。
+如果你在头文件A里定义了结构体或者类类型（这是最常见的情况），那么问题来了，编译时会报大量的重复定义错误。
+例如要编写头文件test.h，在头文件开头写上两行：
+#ifndef _TEST_H
+#define _TEST_H //一般是文件名的大写
+头文件结尾写上一行：
+#endif
+这样一个工程文件里同时包含两个test.h时，就不会出现重定义的错误了。
+'''
 class Course{
     
     //友元函数：读取输入创建新的课程
@@ -24,7 +36,7 @@ public:
     virtual void PrintInfo() const;
 
     //返回课程名称
-    inline string GetName() const {return name;};
+    inline string GetName() const {return name;}; //内联函数的作用？ -- 
 
     //设置课程名称
     inline void SetName(const string& newName){
@@ -54,7 +66,8 @@ class ProjectCourse: public Course{
 public:
     //设置标签
     inline void SetTag(const string& newTag){
-        tag=newTag; };
+        tag=newTag; 
+    };
     //返回标签
     inline string GetTag() const { return tag; };
 
