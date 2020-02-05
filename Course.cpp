@@ -16,6 +16,14 @@ Course::Course(){
     //默认课程名称为空字符串
     name="";
 }
+// protected:
+//     //课程id
+//     int id;
+//     //课程名称
+//     string name;
+//     //设置静态变量来生成唯一的ID值
+//     static int currentId;
+// };  
 
 //课程类拷贝构造函数
 Course::Course(const Course& course){
