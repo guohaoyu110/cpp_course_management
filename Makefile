@@ -2,10 +2,7 @@ CC = g++
 CFLAGS = -std=c++11
 
 all: main.o CmdManager.o Course.o CourseManager.o
-	$(CC) $(CFLAGS) main.o CmdManager.o Course.o CourseManager.o -o cmsys
-
-main.o: main.cpp
-	$(CC) $(CFLAGS) -c main.cpp
+	$(CC) $(CFLAGS) CmdManager.o Course.o CourseManager.o main.o -o cmsys
 
 CmdManager.o: CmdManager.cpp CmdManager.h
 	$(CC) $(CFLAGS) -c CmdManager.cpp
@@ -16,5 +13,8 @@ CourseManager.o: CourseManager.cpp CourseManager.h
 Course.o: Course.cpp Course.h
 	$(CC) $(CFLAGS) -c Course.cpp
 
+main.o: main.cpp
+	$(CC) $(CFLAGS) -c main.cpp
+
 clean:
-	rm *.o cmsys
+	rm -f *.o 

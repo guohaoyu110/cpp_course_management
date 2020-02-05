@@ -4,7 +4,7 @@ using namespace std;
 
 //主函数
 
-int mian()
+int main()
 {
     //输入的命令
     int cmd;
